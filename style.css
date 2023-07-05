@@ -8,7 +8,7 @@ body {
 
 /*****************************************
   *----------------------------------
-  |  ThisStyleVersion: 1.1.0      |
+  |  ThisStyleVersion: 1.1.1      |
   |  © 2021-2023 By Pusyuu        |
   |  LastUpdate: 2023-07-05       |
   |  ・。・catalogﾌﾟｼｭｰ・・・。   |
@@ -72,7 +72,7 @@ header {
 
 .catalog_card {
   margin: 5px;
-  width: 16vw;
+  width: 20vw;
   border: 0.5px solid #00ff00;
   position: relative;
   border-radius: 5px;
@@ -110,11 +110,16 @@ header {
 }
 
 @media only screen and (max-width:750px) {
-.flex-wrapper {
-  display: block;
-}
 .f_box-1 {
   width: auto;
   padding: 10px;
+}
+.catalog_card {
+  padding: 0 10px;
+  width: 80vw;
+  height: auto;
+}
+.catalog_card_image {
+  height: 230px;
 }
 }
