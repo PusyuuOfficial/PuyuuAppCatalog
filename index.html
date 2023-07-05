@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang ="ja">
+  <head>
+    <meta class="downl_button" charset="UTF-8">
+    <meta class="downl_button" name='description' content='プシューサービスのアプリカタログでは、プシューが作ったアプリの展示、紹介、購入等が可能です。'>
+    <meta class="downl_button" name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=6.0, minimum-scale=1.0">
+    <meta class="downl_button" name="twitter:card" content="Summary_large_Image">
+    <meta class="downl_button" name="twitter:site" content="@PusyuuOfficial">
+    <meta class="downl_button" name="twitter:title" content="プシューサービス - アプリカタログ">
+    <meta class="downl_button" name="twitter:description" content="プシューサービスのアプリカタログでは、プシューが作ったアプリの展示、紹介、購入等が可能です。">
+    <meta class="downl_button" name="twitter:image" content="https://21emon.wjg.jp/SystemFolder/IconData/kamibukuro.png">
+    <title>プシューサービス - アプリカタログ</title>
+    <link rel="canonical" href="http://21emon.wjg.jp">
+    <link rel="shortcut icon" href="../SystemFolder/IconData/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <!--
+        *----------------------------------
+        |  ThisPageVersion: 2.2.0       |
+        |  © 2021-2023 By Pusyuu        |
+        |  LastUpdate: 2023-07-05       |
+        |  ・。・プシューカタログ㌨     |
+      ----------------------------------*
+    -->
+  </head>
+  <body>
+    <header>
+      <a class="downl_button" style="display: inline-block;" href="https://21emon.wjg.jp/cgi-bin/public/contact_form/contact.php">プシューにお問合せ</a>
+    </header>
+    <div class="title_box">
+      <h1>プシューアプリカタログへようこそ</h1>
+      <p>こちらのサービスでは、プシューが作ったアプリを閲覧、無料のアプリや有料アプリなどの、購入等が可能です。</p>
+    </div>
+    <div style="margin-bottom: 75px;">
+      <div class="flex-wrapper" id="app">
+        <article v-for="(card, index) in cards" :key="index" class="catalog_card">
+          <a :href="card.link" class="catalog_card_link">
+            <span v-if="card.new" class="catalog_card_label">New</span>
+            <img :src="card.image" :alt="card.imageAlt" class="catalog_card_image" oncontextmenu="return false;" ondragstart="return false;" />
+            <div class="catalog_card_info">
+              <time :datetime="card.date" class="catalog_card_time">{{ card.date }}</time>
+              <h1 class="catalog_card_headline">{{ card.title }}</h1>
+              <p class="catalog_card_description">{{ card.description }}</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+    <script src="./catalog_list.vue"></script>
+  </body>
+</html>
