@@ -3,6 +3,7 @@
   |  ThisStyleVersion: 1.0.1      |
   |  ﾂｩ 2021-2023 By Pusyuu       |
   |  LastUpdate: 2023-07-06       |
+  |  License: MIT License         |
   |  (^U^)PusyuuVueDesu           |
 ----------------------------------*
 ******************************************/
