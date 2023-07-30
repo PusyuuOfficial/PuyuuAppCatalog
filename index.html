@@ -15,9 +15,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <!--
         *----------------------------------
-        |  ThisPageVersion: 2.2.4       |
+        |  ThisPageVersion: 2.2.5       |
         |  © 2021-2023 By Pusyuu        |
-        |  LastUpdate: 2023-07-25       |
+        |  LastUpdate: 2023-07-30       |
         |  License: MIT License         |
         |  ・。・プシューカタログ㌨     |
       ----------------------------------*
@@ -40,7 +40,7 @@
             <img :src="card.image" :alt="card.imageAlt" class="catalog_card_image" oncontextmenu="return false;" ondragstart="return false;" />
             <div class="catalog_card_info">
               <time :datetime="card.date" class="catalog_card_time">{{ card.date }}</time>
-              <h1 class="catalog_card_headline">{{ card.title }}</h1>
+              <h2 class="catalog_card_headline">{{ card.title }}</h2>
             </div>
           </a>
         </article>
