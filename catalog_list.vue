@@ -1,8 +1,8 @@
 /*****************************************
   *----------------------------------
-  |  ThisStyleVersion: 1.0.1      |
+  |  ThisStyleVersion: 1.0.2      |
   |  ﾂｩ 2021-2023 By Pusyuu       |
-  |  LastUpdate: 2023-07-06       |
+  |  LastUpdate: 2023-10-03       |
   |  License: MIT License         |
   |  (^U^)PusyuuVueDesu           |
 ----------------------------------*
@@ -18,7 +18,7 @@ new Vue({
           image: "./catalog_img/app_image3.png",
           imageAlt: "カタログイメージ",
           date: "2023-06-06",
-          title: "顔文字制作機",
+          title: "顔文字作成機",
           link: "./catalog_page/kao"
         },
         {
@@ -34,7 +34,7 @@ new Vue({
           image: "./catalog_img/app_image1.png",
           imageAlt: "カタログイメージ",
           date: "2023-06-06",
-          title: "プシューアプリ",
+          title: "プシューマルチアプリ",
           link: "./catalog_page/papp"
         },
         // Add more card objects here...
