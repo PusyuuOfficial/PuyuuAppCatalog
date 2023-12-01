@@ -1,0 +1,76 @@
+{
+  "cards": [
+    {
+      "new": true,
+      "image": "./catalog_img/app_image9.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-22",
+      "title": "シンプルメモノート",
+      "link": "./catalog_page/smp"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image8.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-08",
+      "title": "プシュー天気予報",
+      "link": "./catalog_page/ten"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image7.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-08",
+      "title": "プシュー地震速報",
+      "link": "./catalog_page/zis"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image6.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-06",
+      "title": "ランダムに言葉を返すボット",
+      "link": "./catalog_page/ran"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image4.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-06",
+      "title": "カラーコードマッチャー",
+      "link": "./catalog_page/col"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image5.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-11-06",
+      "title": "カッコイイ周期表",
+      "link": "./catalog_page/per"
+    },
+    {
+      "new": true,
+      "image": "./catalog_img/app_image3.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-06-06",
+      "title": "顔文字作成機",
+      "link": "./catalog_page/kao"
+    },
+    {
+      "new": false,
+      "image": "./catalog_img/app_image2.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-06-06",
+      "title": "カレンダー、時報付き時計",
+      "link": "./catalog_page/cal"
+    },
+    {
+      "new": false,
+      "image": "./catalog_img/app_image1.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2023-06-06",
+      "title": "プシューマルチアプリ",
+      "link": "./catalog_page/papp"
+    }
+  ]
+}

@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-      <a class="downl_button" style="display: inline-block;" href="https://21emon.wjg.jp/cgi-bin/public/contact_form/contact.php">プシューにお問合せ</a>
+      <a style="display: block; padding: 5px; border: 1px solid #fff; border-radius: 50px; text-align: center;" href="https://21emon.wjg.jp/cgi-bin/public/contact_form/contact.php">プシューにお問合せ</a>
     </header>
     <div class="title_box">
       <h1>プシューアプリカタログへようこそ</h1>
@@ -35,21 +35,63 @@
     </div>
     <div style="margin-bottom: 75px;">
       <div class="flex-wrapper" id="app">
-        <article v-for="(card, index) in cards" :key="index" class="catalog_card">
-          <a :href="card.link" class="catalog_card_link">
-            <span v-if="card.new" class="catalog_card_label">New</span>
-            <img :src="card.image" :alt="card.imageAlt" class="catalog_card_image" oncontextmenu="return false;" ondragstart="return false;" />
-            <div class="catalog_card_info">
-              <time :datetime="card.date" class="catalog_card_time">{{ card.date }}</time>
-              <h2 class="catalog_card_headline">{{ card.title }}</h2>
-            </div>
-          </a>
-        </article>
+
       </div>
     </div>
-    <script src="./catalog_list.vue"></script>
     <script>
-      alert("新作アプリ開発中です。公開をお楽しみに〜。アプリ名：カラーコードマッチャー、カッコイイ周期表");
+      // JSONデータを取得する
+      fetch('./catalog_list.json')
+        .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換
+        .then(data => {
+          // データを処理しカードを生成する
+          data.cards.forEach((card, index) => {
+            const article = document.createElement('article');
+            article.classList.add('catalog_card');
+
+            const link = document.createElement('a');
+            link.href = card.link;
+            link.classList.add('catalog_card_link');
+
+            const label = document.createElement('span');
+            if (card.new) {
+              label.classList.add('catalog_card_label');
+              label.textContent = 'New';
+            }
+
+            const image = document.createElement('img');
+            image.src = card.image;
+            image.alt = card.imageAlt;
+            image.classList.add('catalog_card_image');
+            image.setAttribute('oncontextmenu', 'return false;');
+            image.setAttribute('ondragstart', 'return false;');
+
+            const infoDiv = document.createElement('div');
+            infoDiv.classList.add('catalog_card_info');
+
+            const time = document.createElement('time');
+            time.setAttribute('datetime', card.date);
+            time.classList.add('catalog_card_time');
+            time.textContent = card.date;
+
+            const headline = document.createElement('h2');
+            headline.classList.add('catalog_card_headline');
+            headline.textContent = card.title;
+
+            // ドキュメントに要素を追加
+            infoDiv.appendChild(time);
+            infoDiv.appendChild(headline);
+
+            link.appendChild(label);
+            link.appendChild(image);
+            link.appendChild(infoDiv);
+
+            article.appendChild(link);
+
+            // このarticle要素を必要な場所に追加
+            document.getElementById('app').appendChild(article);
+          });
+        })
+        .catch(error => console.log('データの取得中にエラーが発生しました:', error));
     </script>
   </body>
 </html>
