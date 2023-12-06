@@ -8,9 +8,9 @@ body {
 
 /*****************************************
   *----------------------------------
-  |  ThisStyleVersion: 1.4.0      |
+  |  ThisStyleVersion: 1.4.1      |
   |  © 2021-2023 By Pusyuu        |
-  |  LastUpdate: 2023-07-19       |
+  |  LastUpdate: 2023-12-06       |
   |  License: MIT License         |
   |  ・。・catalogﾌﾟｼｭｰ・・・。   |
 ----------------------------------*
@@ -75,8 +75,9 @@ header {
 }
 
 .title_box {
-  padding: 20px;
+  padding: 15px 35px 15px;
   height: auto;
+  width: 100%;
 }
 
 .image_box {
@@ -142,15 +143,18 @@ header {
 }
 
 @media only screen and (max-width:750px) {
-.f_box-1 {
-  width: auto;
-  padding: 10px;
-}
-.catalog_card {
-  width: 80vw;
-  height: auto;
-}
-.catalog_card_image {
-  height: 230px;
-}
+  .f_box-1 {
+    width: auto;
+    padding: 10px;
+  }
+  .catalog_card {
+    width: 80vw;
+    height: auto;
+  }
+  .title_box {
+    padding: 15px;
+  }
+  .catalog_card_image {
+    height: 230px;
+  }
 }
