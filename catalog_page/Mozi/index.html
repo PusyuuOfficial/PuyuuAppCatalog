@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name='description' content='この文字拡大コミニュケーションとは、もじを拡大して声を出さずに話したり少し離れてる際に声を出さずに話すことを目的に作られました、例えば怒られてるときなど、相手がモールス信号がわからない標準言語で話さなければ！！というときに使うツールです。'>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=6.0, minimum-scale=1.0">
+    <title>プシューアプリカタログ - 文字拡大コミニュケーションを使ってみませんか？</title>
+    <link rel="shortcut icon" href="../../../PusyuuPage/IconData/favicon.ico">
+    <link rel="stylesheet" href="../../style.css">
+    <script>
+      fetch('../../catalog_list.json')
+        .then(response => response.json())
+        .then(data => {
+          data.cards.forEach((info, index) => {
+            if (info.title == "文字拡大コミニュケーション") {
+              const image = document.getElementById("image");
+              image.src = "../." + info.image;
+              const downloadLink = document.getElementById("downloadLink");
+              downloadLink.href = "../." + info.downloadLink;
+              console.log("../." + info.downloadLink);
+            }
+          });
+        });
+    </script>
+  </head>
+  <body>
+    <div class="main_wrapper">
+      <div class="flex-wrapper">
+        <div class="title_box">
+          <h1>文字拡大コミニュケーションを使ってみませんか？</h1>
+          <p>この文字拡大コミニュケーションとは、もじを拡大して声を出さずに話したり少し離れてる際に声を出さずに話すことを目的に作られました、例えば怒られてるときなど、相手がモールス信号がわからない標準言語で話さなければ！！というときに使うツールです。<p>
+        </div>
+        <div class="f_box-1">
+          <div class="image_box">
+            <img id="image" src="">
+          </div>
+          <h3>このアプリの特徴</h3>
+          <ol>
+            <li>アプリをインストールせずにアプリと同様の機能を使用することができる。</li>
+            <li>更新は簡単でアプリあるいはサイトをリロードか再起動させることで更新完了する</li>
+            <li>会員登録不要</li>
+            <li>声を出さずに相手に物事を伝え会話が可能。</li>
+            <li>広告なしで利用可能です。</li>
+            <li>情報の心配ご無用、情報収取は一切ありません。</li>
+            <li>文字の大きさの変更が可能。</li>
+            <li>文字を書くパネルは開閉式なので邪魔にならない。</li>
+          </ol>
+        </div>
+        <div class="f_box-1">
+          <h2>アプリのダウンロードや使用こちら</h2>
+          <div class="downl_buttons">
+            <a href="https://21emon.wjg.jp/MoziZoomCommuni">アプリをウェブブラウザで使用</a>
+            <a id="downloadLink" href="">アプリをダウンロードして使用</a>
+          </div>
+          <p>※アプリのダウンロードはブラウザ動作のHTMLファイルでダウンロードです。ファイルマネージャーからダウンロードしたアプリを展開してindex.htmlを開けば利用可能です。うまく機能しない場合は、サードパーティー製のhttpサーバーにファイルを入れて起動ご設定したローカルIPからご利用が可能です。</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

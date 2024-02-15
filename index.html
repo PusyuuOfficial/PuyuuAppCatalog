@@ -5,37 +5,37 @@
     <meta name='description' content='プシューアプリカタログでは、プシューが作ったアプリの、購入等が可能です。'>
     <meta name="keywords" content="プシューアプリ,顔文字作成機,メモ帳,ウェブアプリ,ダウンロード可能,無料">
     <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=6.0, minimum-scale=1.0">
+    <meta name="copyright" content="© 2020-2024 created by PusyuuWanko/">
     <meta name="twitter:card" content="Summary_large_Image">
     <meta name="twitter:site" content="@PusyuuOfficial">
     <meta name="twitter:title" content="プシューアプリカタログ - ホーム">
     <meta name="twitter:description" content="プシューアプリカタログでは、プシューが作ったアプリの、購入等が可能です。">
     <meta name="twitter:image" content="https://21emon.wjg.jp/SystemFolder/IconData/kamibukuro.png">
     <title>プシューアプリカタログ - ホーム</title>
-    <link rel="shortcut icon" href="../SystemFolder/IconData/favicon.ico">
+    <link rel="shortcut icon" href="https://21emon.wjg.jp/SystemFolder/IconData/favicon.ico">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <!--
         *----------------------------------
-        |  ThisPageVersion: 2.3.1       |
-        |  © 2021-2023 By Pusyuu        |
-        |  LastUpdate: 2023-10-03       |
+        |  ThisPageVersion: 2.3.2       |
+        |  © 2021-2024 By PusyuuWanko/  |
+        |  LastUpdate: 2024-01-16       |
         |  License: MIT License         |
-        |  ・。・プシューカタログ㌨     |
+        |  PusyuuAppCatalog             |
       ----------------------------------*
     -->
   </head>
   <body>
     <header>
-      <a style="display: block; padding: 5px; border: 1px solid #fff; border-radius: 50px; text-align: center;" href="https://21emon.wjg.jp/cgi-bin/public/contact_form/contact.php">プシューにお問合せ</a>
+      <a style="display: block; padding: 5px; border: 1px solid #fff; border-radius: 50px; text-align: center;" href="https://21emon.wjg.jp/contact_form/contact.php">プシューにお問合せ</a>
     </header>
     <div class="title_box">
       <h1>プシューアプリカタログへようこそ</h1>
       <p>こちらのサービスでは、プシューが作ったアプリを閲覧、無料のアプリや有料アプリなどの、購入(ダウンロード)等が可能です。</p>
-      <p>アプリカタログはプシューページの利用規約に元図いて実装されていますそのため利用規約・プライバシーポリシーをご覧になって同意されてからご利用ください（<a href="https://21emon.wjg.jp/SystemFolder/PageData/p6/content.php" target="_blank">利用規約</a>）・（<a style="padding: 5px;" href="https://21emon.wjg.jp/SystemFolder/PageData/p7/content.php" target="_blank">プライバシーポリシー</a>）はこの欄から、ご覧になれます。</p>
+      <p>アプリカタログはプシューページの利用規約に元図いて実装されていますそのため利用規約・プライバシーポリシーをご覧になって同意されてからご利用ください（<a href="https://21emon.wjg.jp/TermsAndPrivacypolicy/terms" target="_blank">利用規約</a>）・（<a style="padding: 5px;" href="https://21emon.wjg.jp/TermsAndPrivacypolicy/privacypolicy" target="_blank">プライバシーポリシー</a>）はこの欄から、ご覧になれます。</p>
     </div>
     <div style="margin-bottom: 75px;">
       <div class="flex-wrapper" id="app">
-
+        <p style="color: #ff0000; display: flex; justify-content: center;">あなたの環境ではJSが有効になっていないか、ブラウザが古い可能性があります。</p>
       </div>
     </div>
     <script>
@@ -43,6 +43,8 @@
       fetch('./catalog_list.json')
         .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換
         .then(data => {
+          const Ele = document.getElementById('app');
+          Ele.innerHTML = "";
           // データを処理しカードを生成する
           data.cards.forEach((card, index) => {
             const article = document.createElement('article');
@@ -88,10 +90,10 @@
             article.appendChild(link);
 
             // このarticle要素を必要な場所に追加
-            document.getElementById('app').appendChild(article);
+            Ele.appendChild(article);
           });
         })
-        .catch(error => console.log('データの取得中にエラーが発生しました:', error));
+        .catch(error => alert('内部エラー：' + error + " このエラーの対処法：あなたにできることはありません、ことをいち早く開発者に伝えてください。"));
     </script>
   </body>
 </html>

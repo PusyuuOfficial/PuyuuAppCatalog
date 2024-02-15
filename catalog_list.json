@@ -2,10 +2,20 @@
   "cards": [
     {
       "new": true,
+      "image": "./catalog_img/app_image10.png",
+      "imageAlt": "カタログイメージ",
+      "date": "2024-01-07",
+      "title": "文字拡大コミニュケーション",
+      "downloadLink" : "./catalog_download/MoziZoomCommuni.zip",
+      "link": "./catalog_page/Mozi"
+    },
+    {
+      "new": true,
       "image": "./catalog_img/app_image9.png",
       "imageAlt": "カタログイメージ",
       "date": "2023-11-22",
       "title": "シンプルメモノート",
+      "downloadLink" : "./catalog_download/MemoNote.zip",
       "link": "./catalog_page/smp"
     },
     {
@@ -14,6 +24,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-11-08",
       "title": "プシュー天気予報",
+      "downloadLink" : "./catalog_download/TenkiApiOfTool.zip",
       "link": "./catalog_page/ten"
     },
     {
@@ -22,6 +33,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-11-08",
       "title": "プシュー地震速報",
+      "downloadLink" : "./catalog_download/ZisinnApiOfTool.zip",
       "link": "./catalog_page/zis"
     },
     {
@@ -30,6 +42,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-11-06",
       "title": "ランダムに言葉を返すボット",
+      "downloadLink" : "./catalog_download/RandomSpeak.zip",
       "link": "./catalog_page/ran"
     },
     {
@@ -38,6 +51,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-11-06",
       "title": "カラーコードマッチャー",
+      "downloadLink" : "./catalog_download/ColorCodeMatcher.zip",
       "link": "./catalog_page/col"
     },
     {
@@ -46,6 +60,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-11-06",
       "title": "カッコイイ周期表",
+      "downloadLink" : "./catalog_download/PeriodicTable.zip",
       "link": "./catalog_page/per"
     },
     {
@@ -54,6 +69,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-06-06",
       "title": "顔文字作成機",
+      "downloadLink" : "./catalog_download/CreateToolTheFaceMoji.zip",
       "link": "./catalog_page/kao"
     },
     {
@@ -62,6 +78,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-06-06",
       "title": "カレンダー、時報付き時計",
+      "downloadLink" : "./catalog_download/ClockWithTimeSignal.zip",
       "link": "./catalog_page/cal"
     },
     {
@@ -70,6 +87,7 @@
       "imageAlt": "カタログイメージ",
       "date": "2023-06-06",
       "title": "プシューマルチアプリ",
+      "downloadLink" : "./catalog_download/PusyuuMultiApp.zip",
       "link": "./catalog_page/papp"
     }
   ]

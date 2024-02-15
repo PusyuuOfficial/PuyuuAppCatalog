@@ -5,8 +5,23 @@
     <meta name='description' content='このカレンダー、時報付き時計は、その名の通りカレンダーを見ながら時計を確認できてしまうアプリで30分と60分の時報付き時計なのです。'>
     <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=6.0, minimum-scale=1.0">
     <title>プシューアプリカタログ - カレンダー、時報付き時計を使ってみませんか？</title>
-    <link rel="shortcut icon" href="../../../SystemFolder/IconData/favicon.ico">
+    <link rel="shortcut icon" href="../../../PusyuuPage/IconData/favicon.ico">
     <link rel="stylesheet" href="../../style.css">
+    <script>
+      fetch('../../catalog_list.json')
+        .then(response => response.json())
+        .then(data => {
+          data.cards.forEach((info, index) => {
+            if (info.title == "カレンダー、時報付き時計") {
+              const image = document.getElementById("image");
+              image.src = "../." + info.image;
+              const downloadLink = document.getElementById("downloadLink");
+              downloadLink.href = "../." + info.downloadLink;
+              console.log("../." + info.downloadLink);
+            }
+          });
+        });
+    </script>
   </head>
   <body>
     <div class="main_wrapper">
@@ -17,7 +32,7 @@
         </div>
         <div class="f_box-1">
           <div class="image_box">
-            <img src="../../catalog_img/app_image2.png">
+            <img id="image" src="">
           </div>
           <h3>このアプリの特徴</h3>
           <ol>
@@ -34,8 +49,8 @@
         <div class="f_box-1">
           <h2>アプリのダウンロードや使用こちら</h2>
           <div class="downl_buttons">
-            <a href="https://21emon.wjg.jp/ClockWithTimeSignal/">アプリをウェブブラウザで使用</a>
-            <a href="https://21emon.wjg.jp/SystemFolder/DocData/ClockWithTimeSignal.zip">アプリをダウンロードして使用</a>
+            <a href="https://21emon.wjg.jp/ClockWithTimeSignal">アプリをウェブブラウザで使用</a>
+            <a id="downloadLink" href="">アプリをダウンロードして使用</a>
           </div>
           <p>※アプリのダウンロードはブラウザ動作のHTMLファイルでダウンロードです。ファイルマネージャーからダウンロードしたアプリを展開してindex.htmlを開けば利用可能です。うまく機能しない場合は、サードパーティー製のhttpサーバーにファイルを入れて起動ご設定したローカルIPからご利用が可能です。</p>
         </div>

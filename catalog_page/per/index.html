@@ -7,6 +7,20 @@
     <title>プシューアプリカタログ - カッコイイ周期表一度使ってみませんか？</title>
     <link rel="shortcut icon" href="../../../SystemFolder/IconData/favicon.ico">
     <link rel="stylesheet" href="../../style.css">
+    <script>
+      fetch('../../catalog_list.json')
+        .then(response => response.json())
+        .then(data => {
+          data.cards.forEach((info, index) => {
+            if (info.title == "カッコイイ周期表") {
+              const image = document.getElementById("image");
+              image.src = "../." + info.image;
+              const downloadLink = document.getElementById("downloadLink");
+              downloadLink.href = "../." + info.downloadLink;
+            }
+          });
+        });
+    </script>
   </head>
   <body>
     <div class="main_wrapper">
@@ -17,7 +31,7 @@
         </div>
         <div class="f_box-1">
           <div class="image_box">
-            <img src="../../catalog_img/app_image5.png">
+            <img id="image" src="">
           </div>
           <h3>このアプリの特徴</h3>
           <ol>
@@ -33,7 +47,7 @@
           <h2>アプリのダウンロードや使用こちら</h2>
           <div class="downl_buttons">
             <a href="http://21emon.wjg.jp/PeriodicTable">アプリをウェブブラウザで使用</a>
-            <a href="https://21emon.wjg.jp/SystemFolder/DocData/PeriodicTable.zip">アプリをダウンロードして使用</a>
+            <a id="downloadLink" href="">アプリをダウンロードして使用</a>
           </div>
           <p>※アプリのダウンロードはzipファイル形式で解凍するとandroidインストーラー形式のAPKとブラウザ動作のHTMLになります。ウィルスを私が仕込むことは一切ありませんですがもしセキュリティ面が気になる方はサードパーティー製のウィルス対策ソフトなどでスキャンしてご利用ください。</p>
         </div>
